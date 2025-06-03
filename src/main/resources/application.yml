@@ -9,9 +9,16 @@ spring:
     url: jdbc:mysql://localhost:3306/hao
     username: root
     password: 1234
-  # session 失效时间
+  # redis 配置
+  redis:
+      host: localhost
+      port: 6379
+      password: 123456
+      database: 0
+  # session 失效时间 (分钟)
   session:
     timeout: 86400
+    store-type: redis
 # 接口文档配置
 knife4j:
   enable: true
